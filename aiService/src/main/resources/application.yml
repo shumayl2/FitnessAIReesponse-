@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: AIService
+
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/airecommendationdatabase
+      database: airecommendationdatabase
+
+eureka:
+  client:
+    service-url:
+      defaultzone: http://localhost:8761/eureka/
