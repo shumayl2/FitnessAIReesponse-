@@ -14,8 +14,8 @@ import java.util.List;
 @Builder
 public class Recommendation {
     private String id;
-    private String activityid;
-    private String userid;
+    private String activityId;
+    private String userId;
     private String recommendation;
     private List<String> improvements;
     private List<String> suggestions;

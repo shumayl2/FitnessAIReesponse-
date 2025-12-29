@@ -10,20 +10,20 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class RecommendationService {
-    @Autowired
+
     private final RecommendationRepository recomrepo;
 
-    public Recommendation getActivityRecommendation(String activityid){
+    public Recommendation getActivityRecommendation(String activityId){
 
-        Recommendation activityIdNotFound = recomrepo.findByActivityId(activityid).orElseThrow(() -> new RuntimeException("Activity Id not found"));
+        Recommendation activityIdNotFound = recomrepo.findByActivityId(activityId).orElseThrow(() -> new RuntimeException("Activity Id not found"));
 
         return activityIdNotFound;
 
     }
 
-    public List<Recommendation> getUserRecommendation(String userid) {
+    public List<Recommendation> getUserRecommendation(String userId) {
 
-        List<Recommendation> byUserId = recomrepo.findByUserId(userid);
+        List<Recommendation> byUserId = recomrepo.findByUserId(userId);
 
         return byUserId;
     }

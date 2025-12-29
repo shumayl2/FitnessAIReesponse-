@@ -20,17 +20,17 @@ public class AIController {
 
     private RecommendationService recommendatioService;
 
-    @GetMapping("/user/{userid}")
-    public ResponseEntity<List<Recommendation>> getUserRecommendation(@PathVariable String userid){
-        List<Recommendation> userRecommendation = recommendatioService.getUserRecommendation(userid);
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<List<Recommendation>> getUserRecommendation(@PathVariable String userId){
+        List<Recommendation> userRecommendation = recommendatioService.getUserRecommendation(userId);
 
         return new ResponseEntity<>(userRecommendation, HttpStatus.OK);
     }
 
-    @GetMapping("/activity/{activityid}")
-    public ResponseEntity<Recommendation> getActivityRecommendation(@PathVariable String activityid){
+    @GetMapping("/activity/{activityId}")
+    public ResponseEntity<Recommendation> getActivityRecommendation(@PathVariable String activityId){
 
-        Recommendation activityRecommendation = recommendatioService.getActivityRecommendation(activityid);
+        Recommendation activityRecommendation = recommendatioService.getActivityRecommendation(activityId);
         return new ResponseEntity<>(activityRecommendation,HttpStatus.OK);
 
     }
